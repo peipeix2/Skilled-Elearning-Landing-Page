@@ -2,6 +2,219 @@
   box-sizing: border-box;
 }
 
-h1, p {
+h1,
+p,
+a {
   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  /* padding: 1em; */
+  min-width: 375px;
+  max-width: 767px;
+  /* height: 2615px; */
+}
+
+.nav {
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+.nav-container {
+  width: 100%;
+  height: 48px;
+  padding: 1em 1em 0px 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 48px;
+  background-color: #13183F;
+  border-radius: 28px;
+
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+header {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.header-intro {
+  height: 285px;
+}
+
+.header-intro h1 {
+  font-weight: 800;
+  font-size: 40px;
+  color: #13183F;
+  margin-top: 0px;
+  margin-bottom: 26px;
+}
+
+.header-intro p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #83869A;
+  line-height: 26px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+.header-intro a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 167px;
+  height: 56px;
+  background: linear-gradient(to bottom, rgba(255, 111, 72, 1), rgba(240, 42, 166, 1));
+  border-radius: 31.5px;
+
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+
+  margin-bottom: 46px;
+}
+
+.header-img {
+  width: 100%;
+  margin-top: 55px;
+
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.25);
+}
+
+.card-section-container {
+  width: 100%;
+  margin-top: 3em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(240, 241, 255, 1));
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(255, 111, 72, 1), rgba(240, 42, 166, 1));
+  border-radius: 10px;
+
+  padding: 0 2em;
+  margin-bottom: 3em;
+}
+
+.banner span {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.card-container {
+  margin-bottom: 3em;
+  width: 100%;
+  height: 259px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442);
+}
+
+.course-inner-card {
+  position: relative;
+  margin: 2em;
+}
+
+.course-name {
+  font-weight: 800;
+  font-size: 20px;
+  color: #13183F;
+  margin-top: 3em;
+  margin-bottom: 16px;
+}
+
+.course-intro {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: #83869A;
+  margin-bottom: 24px;
+}
+
+.course-inner-card a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #F74780;
+}
+
+.course-icon {
+  position: absolute;
+  top: -86px;
+  width: 56px;
+  height: 56px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background-color: #13183F;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 48px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-container img {
+  width: 89px;
+  height: auto;
+}
+
+.footer-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(72, 81, 255, 1), rgba(240, 42, 166, 1));
+  border-radius: 28px;
+
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
