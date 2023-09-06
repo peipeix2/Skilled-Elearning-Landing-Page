@@ -1,22 +1,17 @@
-# Frontend Mentor - Skilled e-learning landing page solution
+# Skilled E-learning Landing Page
 
-This is a solution to the [Skilled e-learning landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This project is a responsive website, with optimal layout for mobile, tablet and desktop. Built with HTML and CSS.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -29,20 +24,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop Layout
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./screenshot-desktop.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Tablet Layout
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+![](./screenshot-tablet.png)
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+Mobile Layout
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+![](./screenshot-mobile.png)
 
 ## My process
 
@@ -51,61 +43,84 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Scale and Position of the Header Image
 
-To see how you can add code snippets, see below:
+The biggest challenge for this project is how to achieve the desirable effect for the header image in responsive layout.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+The obstacles come in many ways:
+
+1. Use Scale to Right the Proportion
+
+The assets for the header image contain a lot of white spaces, so one has to use scale to make it proportional to the webpage.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.hero-img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.25);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+2. How to Use Absolute Positioning (and Set the Right Relative Positioned Ancestor)
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The toughest challenge is the positioning of the header image in tablet and desktop layout. I had a hard time deciding which element should be set to absolute and which should be set relative.
+
+In my solution, I set the container to relative, and set both the image wrapper and the image itself to absolute, so that the image will be fixed even if the screen width changes (since the image has a lot of white space, if one doesn't set the image to absolute, it will kind of flow in the image wrapper).
+
+Below is the example for tablet layout.
+
+```css
+.container {
+  position: relative;
+  max-width: 1023px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.header-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  overflow: visible;
+}
+
+.hero-img {
+  position: absolute;
+  top: -60px;
+  right: -260px; 
+  width: 656.52px;
+  height: 500px;
+  object-fit: contain;
+  transform: scale(1.5);
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Here are some parts that need to be fixed.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Header Image Collides with Words
 
-### Useful resources
+I've set the z-index to -1, so that the image hide below the words when colliding. Still, not the best result.
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- 'Get Started' Couldn't Stick to Bottom of the Card
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I've tried setting the card to flex, and using margin-top: auto on 'Get Started' button, but so far couldn't find a solution to align the button to the bottom of the card.
 
-## Author
+Here is an example.
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+![](./screenshot-getstarted.png)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+Any feedback or advice is highly welcomed.
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+### Frontend Mentor - Skilled e-learning landing page solution
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+This is a solution to the [Skilled e-learning landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
