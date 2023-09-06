@@ -98,7 +98,7 @@ header {
   margin-bottom: 46px;
 }
 
-.header-intro a:before {
+.header-intro a::before {
   content: " ";
   position: absolute;
   top: 0;
@@ -242,7 +242,7 @@ footer {
   color: #FFFFFF;
 }
 
-.footer-container a:before {
+.footer-container a::before {
   content: " ";
   position: absolute;
   top: 0;
@@ -431,7 +431,7 @@ footer {
     line-height: 28px;
   }
 
-  .footer-container a:before {
+  .footer-container a::before {
     width: 167px;
     height: 56px;
   }
