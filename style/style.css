@@ -319,3 +319,124 @@ footer {
     margin-top: 25px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .container {
+    position: relative;
+    max-width: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .nav-container, header, .row, .footer-container {
+    width: 80%;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    height: 85px;
+    padding: 16px 0px;
+  }
+
+  .nav-container img, .footer-container img {
+    width: 114px;
+  }
+
+  header {
+    padding: 0px;
+    height: 600px;
+    justify-content: flex-start;
+  }
+
+  .header-intro {
+    width: 45%;
+    margin: 120px 20px 0px 0px;
+    text-align: left;
+  }
+
+  .header-img {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .hero-img {
+    top: 50px;
+    right: 20px;
+    transform: scale(1.8);
+  }
+
+  .header-btn {
+    width: 167px;
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .header-intro h1 {
+    font-size: 56px;
+    margin-bottom: 29px;
+  }
+
+  .header-intro p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .header-intro a {
+    height: 63px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .row {
+    width: 80%;
+    max-width: 1100px;
+    justify-content: space-between;
+    padding: 0px 0px 48px 0px;
+  }
+
+  .banner,
+  .card-container {
+    flex: 0 0 30%;
+  }
+
+  .banner span {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .card-container {
+    width: 350px;
+    min-height: 346px;
+    height: auto;
+  }
+
+  .course-inner-card {
+    height: fit-content;
+  }
+
+  .course-name {
+    font-size: 24px;
+  }
+
+  .course-intro {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .footer-container a {
+    width: 167px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .footer-container a:before {
+    width: 167px;
+    height: 56px;
+  }
+}
